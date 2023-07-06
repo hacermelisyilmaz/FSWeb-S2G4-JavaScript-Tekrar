@@ -148,6 +148,10 @@ console.log("Üçe bölünen sayıların toplamı: ", ucebolunenlerintoplami);
 
 //3d çözümü
 
+besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi < 500);
+
+console.log("Beş yüzden küçük sayılar: ", besyuzdenkucuksayilar);
+
 //3e çözümü
 
 //3f çözümü
