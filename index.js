@@ -154,6 +154,11 @@ console.log("Beş yüzden küçük sayılar: ", besyuzdenkucuksayilar);
 
 //3e çözümü
 
+siralisayilar = besyuzdenkucuksayilar;
+siralisayilar.sort((a, b) => a - b);
+
+console.log("Beş yüzden küçük sıralı sayılar: ", siralisayilar);
+
 //3f çözümü
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
