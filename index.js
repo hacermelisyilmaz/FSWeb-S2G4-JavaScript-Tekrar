@@ -159,7 +159,43 @@ siralisayilar.sort((a, b) => a - b);
 
 console.log("Beş yüzden küçük sıralı sayılar: ", siralisayilar);
 
+/*
+3f. `tekraredensayilar` adında bir dizi oluşturun. sayilar dizisi içerisindeki bazı sayılar birden fazla kere yazılmış. 
+			sayilar dizisi içerisinde birden fazla kez yazılmış sayıları tespit ederek kaç kere tekrar edildiğini belirten bir string 
+			oluşturulup `tekraredensayilar` dizisine aktarılmasını istiyoruz. Örnek string: "{sayı} sayısı {tekrarSayisi} kere tekrar 
+			edilmiştir"
+			ÖRNEK: sayilar dizisi içerisinde 45 sayısı 3 kere yazılmış. "45 sayısı 3 tekrar edilmiştir" stringini `tekraredensayilar` dizisine 
+			aktaracağız.
+			💡 İPUCU: Tekrar edilen sayıları ve kaç kere tekrar edildiğini kaydetmek için bir nesne tanımlamalısınız, bu görevi yapabilmek için 
+			en az 2 kere döngü yazmalısınız. Birinci döngüde hangi sayının kaç kere tekrar edildiğini tespit edip, 2. döngüde stringi oluşturup 
+			verilen diziye aktarmalısınız.*/
 //3f çözümü
+
+const tekrarEdenSayilarArr = [];
+
+function objectYarat(aSayi, aTekrarArr) {
+  const tekrarObj = {};
+  tekrarObj.sayi = aSayi;
+  tekrarObj.tekrarSayisi = aTekrarArr.length;
+  return tekrarObj;
+}
+
+for (let sayi of sayilar) {
+  let tekrarArr = sayilar.filter((s) => s === sayi);
+  if (tekrarArr.length !== 1) {
+    tekrarEdenSayilarArr.push(objectYarat(sayi, tekrarArr));
+  }
+}
+
+tekraredensayilar = [];
+
+for (let object of tekrarEdenSayilarArr) {
+  tekraredensayilar.push(
+    `${object.sayi} sayısı ${object.tekrarSayisi} kere tekrar edilmiştir`
+  );
+}
+
+console.log(tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 function sa() {
