@@ -129,6 +129,14 @@ console.log("En küçük sayı: ", enkucuk);
 
 // 3b çözümü:
 
+ucetambolunenler = [];
+
+sayilar.forEach((sayi) => {
+  if (!(sayi % 3)) ucetambolunenler.push(sayi);
+});
+
+console.log("Üçe tam bölünen sayılar: ", ucetambolunenler);
+
 //3c çözümü:
 
 //3d çözümü
